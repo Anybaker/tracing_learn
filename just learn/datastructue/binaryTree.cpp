@@ -15,7 +15,7 @@ struct TreeNode
 
 void inorderTraverse(TreeNode *root)//
 {
-    int curdepth=0;int mindepth=__INT_MAX__;int maxdepth=__FLT32_MIN__;
+    int curdepth=0;int mindepth=__INT_MAX__;int maxdepth=INT32_MIN;
     if (root == nullptr)
         return;
 
@@ -66,7 +66,7 @@ void levelTraverse(TreeNode* root)
     }
 }
 
-void leverOrderTraverse)TreeNode* root)
+int leverOrderTraverse(TreeNode* root)
 {
     queue<TreeNode*> q;
     q.push(root);
@@ -80,13 +80,13 @@ void leverOrderTraverse)TreeNode* root)
         {
             TreeNode* cur = q.front();
             cout << "depth:" << depth << "which" << i << "value:" << cur->val;
-            q.pop;
-            i++
+            q.pop();
+            i++;
 
             if(cur->left==nullptr&&cur->right==nullptr) return depth;
 
-            if(cur->left!=nullptr) q.push(q->left);
-            if(cur->right!=nullptr) q.push(q->right);
+            if(cur->left!=nullptr) q.push(cur->left);
+            if(cur->right!=nullptr) q.push(cur->right);
         }
         
     depth++;
