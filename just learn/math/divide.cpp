@@ -19,7 +19,7 @@ void forceDivide(int n)
 
 void divide(int n)
 {
-    for(int i=2;i<=n/i;i++)
+    for(int i=2;i<=n/i;i++)//in n lies a divide bigger than sqrt(n)
     { 
         if(n%i==0){
             int s=0;
