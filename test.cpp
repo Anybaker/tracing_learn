@@ -9,3 +9,4 @@ int main()
 	string s = "123";
 	printf("%c",s+4);
 }
+dvd
