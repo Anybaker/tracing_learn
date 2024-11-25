@@ -34,7 +34,8 @@ void getPrime_linear(int n)
         for(int j=0;j<=n/i;i++)
         {
             st[primes[j]*i]=true;
-            if(i%primes[j]==0) break;//to choose "primes[h]",not focus on "i"
+            if(i%primes[j]==0) break;//to choose "primes[h]",not focus on "i" only to delete "x*prime"
+                                     //此时prime[j]一定是i的最小质因子
         }
     }
 }
