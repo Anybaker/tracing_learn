@@ -31,9 +31,9 @@ int main()
     {
         int x,c;
         cin >> x >> c;
-        add.push_back({x,c});// x是下标 c是插入值
+        add.push_back({x,c});// x是下标 c是插入值 add存储这样一个键值对
 
-        alls.push_back(x);
+        alls.push_back(x);//将下标加入alls
     }
 
     for(int i=0;i<m;i++)
@@ -42,8 +42,8 @@ int main()
         cin >> l >> r;
         query.push_back({l,r});
 
-        alls.push_back(l);
-        alls.push_back(r);
+        alls.push_back(l);//将查询区间左端点加入alls
+        alls.push_back(r);//将查询区间右端点加入alls
     }
 
     // 去重
@@ -52,8 +52,8 @@ int main()
 
     for(auto item: add)
     {
-        int x = find(item.first);
-        a[x] += item.second;
+        int x = find(item.first);//找到了下标在alls中的下标
+        a[x] += item.second;//使用这个下标等价偏移作用在a的下标用来存储 实现映射
     }
 
     //预处理离散化

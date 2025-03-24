@@ -33,9 +33,7 @@ int main()
     {
         int l,r;
         cin >> l >> r;
-        segs.push_back({l,r});
-
-        
+        segs.push_back({l,r});   
     }
 
     merge(segs);

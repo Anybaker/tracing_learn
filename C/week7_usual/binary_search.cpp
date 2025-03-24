@@ -24,6 +24,6 @@ int main()
     else{break;}
     }
     if(a[mid]!=target){cout << "no elements found!!";}
-    else cout<<"found!!"<<a[mid];
+    else cout<<"found!!"<<mid;
 
 }
